@@ -392,9 +392,10 @@ dialog::backdrop { background: rgb(var(--noite-rgb) / 0.72); }
 
 .fechar:hover { background: var(--rosa); }
 
+/* Parte da altura do conteúdo: com "flex: 1", alguns navegadores de celular começam do zero e a janela fica espremida. */
 .miolo {
-  flex: 1;
-  min-height: 0;
+  flex: 1 1 auto;
+  min-height: min(180px, 45vh);
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 20px 16px;
